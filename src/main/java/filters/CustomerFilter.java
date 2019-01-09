@@ -28,9 +28,9 @@ public class CustomerFilter implements Filter{
 		HttpServletResponse res = (HttpServletResponse) response;
 		
 		if (req.getSession().getAttribute("customerFacade")==null) {
-			res.sendRedirect("http://localhost:8080/login.html");
+			res.sendRedirect("https://coupon-system-by-dor.herokuapp.com/login.html");
 		} else if(!(req.getSession().getAttribute("customerFacade") instanceof CustomerFacade)){
-			res.sendRedirect("http://localhost:8080/login.html");
+			res.sendRedirect("https://coupon-system-by-dor.herokuapp.com/login.html");
 			
 		}else {
 			chain.doFilter(request, response);

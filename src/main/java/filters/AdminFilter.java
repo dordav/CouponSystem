@@ -30,10 +30,10 @@ public class AdminFilter implements Filter{
 		
 		if (req.getSession().getAttribute("adminFacade")==null) {
 		
-			res.sendRedirect("http://localhost:8080/login.html");
+			res.sendRedirect("https://coupon-system-by-dor.herokuapp.com/login.html");
 		} else if(!(req.getSession().getAttribute("adminFacade") instanceof AdminFacade)){
 			
-			res.sendRedirect("http://localhost:8080/login.html");
+			res.sendRedirect("https://coupon-system-by-dor.herokuapp.com/login.html");
 		}else {
 			chain.doFilter(request, response);
 		}

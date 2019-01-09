@@ -29,7 +29,7 @@ public class LoginServlet {
 
 		CouponClientFacade cf = (new CouponSystem()).Login(userName, password, type); 
 		if (cf == null) {
-			return "redirect:http:https://coupon-system-by-dor.herokuapp.com/login.html";
+			return "redirect:https://coupon-system-by-dor.herokuapp.com/login.html";
 		}
 
 		request.getSession().setAttribute("facade", cf);
@@ -49,7 +49,7 @@ public class LoginServlet {
 			return "redirect:https://coupon-system-by-dor.herokuapp.com/customer/index.html";
 		}
 
-		return "redirect:http:https://coupon-system-by-dor.herokuapp.com/login.html";
+		return "redirect:https://coupon-system-by-dor.herokuapp.com/login.html";
 	}
 
 }

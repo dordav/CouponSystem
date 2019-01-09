@@ -18,8 +18,7 @@ import exceptions.CouponSystemException;
 public class ConnectionPool {
 
 //	private String url = "jdbc:derby:coupon;create=true";
-	private String urlHeroku = "jdbc:postgresql://ec2-107-20-183-142.compute-1.amazonaws.com:5432/"
-			+ "d1o6cv10hqf58j?sslmode=require";
+	private String urlHeroku = "jdbc:postgresql://ec2-107-20-183-142.compute-1.amazonaws.com:5432/d1o6cv10hqf58j";
 	private String userName = "rfpvpniqnuhvut";
 	private String password = "6abaeb324ff7b83f644e7a623dfd683997840d9c61cae8dc3253749bf6aab5ce";
 	private Collection<Connection> connections;
@@ -33,12 +32,12 @@ public class ConnectionPool {
 	private ConnectionPool() throws CouponSystemException {
 		connections = new HashSet<>();
 		try {
-			Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
 			for (int i = 0; i < con_max_size; i++) {
+				Class.forName("org.postgresql.Driver").newInstance();
 				Connection con = DriverManager.getConnection(urlHeroku,userName,password );
 				connections.add(con);
 			}
-		} catch (SQLException | ClassNotFoundException e) {
+		} catch (SQLException  | ClassNotFoundException | InstantiationException | IllegalAccessException  e) {
 			throw new CouponSystemException("connection pool initialization failed ", e);
 		}
 	}

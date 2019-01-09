@@ -1,0 +1,69 @@
+2019-01-08 20:28:55.038  INFO 12908 --- [main] webServices.FirstWebServiceApplication   : Starting FirstWebServiceApplication on DESKTOP-IS2318T with PID 12908 (C:\Users\Dorda\Desktop\couponsystemforAWS\CouponSystem\target\classes started by Dorda in C:\Users\Dorda\Desktop\couponsystemforAWS\CouponSystem)
+2019-01-08 20:28:55.046  INFO 12908 --- [main] webServices.FirstWebServiceApplication   : No active profile set, falling back to default profiles: default
+2019-01-08 20:28:56.255  INFO 12908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-08 20:28:56.268  INFO 12908 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-08 20:28:56.268  INFO 12908 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-01-08 20:28:56.273  INFO 12908 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_191\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_191\bin;C:\apache-maven-3.6.0\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Users\Dorda\AppData\Local\Microsoft\WindowsApps;C:\Users\Dorda\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dorda\AppData\Roaming\npm;C:\Users\Dorda\AppData\Local\GitHubDesktop\bin;G:\sts-4.1.0.RELEASE;;.]
+2019-01-08 20:28:56.349  INFO 12908 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-08 20:28:56.349  INFO 12908 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1227 ms
+2019-01-08 20:28:56.373  INFO 12908 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-08 20:28:56.374  INFO 12908 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-08 20:28:56.374  INFO 12908 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2019-01-08 20:28:56.374  INFO 12908 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-08 20:28:56.374  INFO 12908 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'adminFilter' to urls: [/admin/*]
+2019-01-08 20:28:56.375  INFO 12908 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'companyFilter' to urls: [/company/*]
+2019-01-08 20:28:56.375  INFO 12908 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'customerFilter' to urls: [/customer/*]
+2019-01-08 20:28:56.375  INFO 12908 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-08 20:28:56.538  INFO 12908 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-08 20:28:56.702  INFO 12908 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-08 20:28:56.705  INFO 12908 --- [main] webServices.FirstWebServiceApplication   : Started FirstWebServiceApplication in 1.963 seconds (JVM running for 2.845)
+2019-01-08 20:29:22.909  INFO 12908 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-08 20:29:22.909  INFO 12908 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-08 20:29:22.914  INFO 12908 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2019-01-08 20:37:18.739  INFO 12908 --- [RMI TCP Connection(15)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-08 20:37:18.741  INFO 12908 --- [RMI TCP Connection(15)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-08 20:37:28.685  INFO 2792 --- [main] webServices.FirstWebServiceApplication   : Starting FirstWebServiceApplication on DESKTOP-IS2318T with PID 2792 (C:\Users\Dorda\Desktop\couponsystemforAWS\CouponSystem\target\classes started by Dorda in C:\Users\Dorda\Desktop\couponsystemforAWS\CouponSystem)
+2019-01-08 20:37:28.688  INFO 2792 --- [main] webServices.FirstWebServiceApplication   : No active profile set, falling back to default profiles: default
+2019-01-08 20:37:29.407  INFO 2792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-08 20:37:29.421  INFO 2792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-08 20:37:29.421  INFO 2792 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-01-08 20:37:29.426  INFO 2792 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_191\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_191\bin;C:\apache-maven-3.6.0\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Users\Dorda\AppData\Local\Microsoft\WindowsApps;C:\Users\Dorda\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dorda\AppData\Roaming\npm;C:\Users\Dorda\AppData\Local\GitHubDesktop\bin;G:\sts-4.1.0.RELEASE;;.]
+2019-01-08 20:37:29.506  INFO 2792 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-08 20:37:29.506  INFO 2792 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 790 ms
+2019-01-08 20:37:29.533  INFO 2792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-08 20:37:29.534  INFO 2792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-08 20:37:29.534  INFO 2792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2019-01-08 20:37:29.534  INFO 2792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-08 20:37:29.534  INFO 2792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'adminFilter' to urls: [/admin/*]
+2019-01-08 20:37:29.534  INFO 2792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'companyFilter' to urls: [/company/*]
+2019-01-08 20:37:29.534  INFO 2792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'customerFilter' to urls: [/customer/*]
+2019-01-08 20:37:29.534  INFO 2792 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-08 20:37:29.679  INFO 2792 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-08 20:37:29.826  INFO 2792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-08 20:37:29.829  INFO 2792 --- [main] webServices.FirstWebServiceApplication   : Started FirstWebServiceApplication in 1.423 seconds (JVM running for 2.219)
+2019-01-08 20:38:22.602  INFO 2792 --- [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-08 20:38:22.604  INFO 2792 --- [RMI TCP Connection(10)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-01-08 20:38:28.773  INFO 13792 --- [main] webServices.FirstWebServiceApplication   : Starting FirstWebServiceApplication on DESKTOP-IS2318T with PID 13792 (C:\Users\Dorda\Desktop\couponsystemforAWS\CouponSystem\target\classes started by Dorda in C:\Users\Dorda\Desktop\couponsystemforAWS\CouponSystem)
+2019-01-08 20:38:28.776  INFO 13792 --- [main] webServices.FirstWebServiceApplication   : No active profile set, falling back to default profiles: default
+2019-01-08 20:38:29.552  INFO 13792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-01-08 20:38:29.565  INFO 13792 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-01-08 20:38:29.565  INFO 13792 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/9.0.12
+2019-01-08 20:38:29.571  INFO 13792 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jre1.8.0_191\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_191/bin/server;C:/Program Files/Java/jre1.8.0_191/bin;C:/Program Files/Java/jre1.8.0_191/lib/amd64;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_191\bin;C:\apache-maven-3.6.0\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\PuTTY\;C:\Users\Dorda\AppData\Local\Microsoft\WindowsApps;C:\Users\Dorda\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dorda\AppData\Roaming\npm;C:\Users\Dorda\AppData\Local\GitHubDesktop\bin;G:\sts-4.1.0.RELEASE;;.]
+2019-01-08 20:38:29.654  INFO 13792 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-01-08 20:38:29.654  INFO 13792 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 848 ms
+2019-01-08 20:38:29.679  INFO 13792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2019-01-08 20:38:29.680  INFO 13792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2019-01-08 20:38:29.680  INFO 13792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'formContentFilter' to: [/*]
+2019-01-08 20:38:29.680  INFO 13792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2019-01-08 20:38:29.680  INFO 13792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'adminFilter' to urls: [/admin/*]
+2019-01-08 20:38:29.680  INFO 13792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'companyFilter' to urls: [/company/*]
+2019-01-08 20:38:29.681  INFO 13792 --- [main] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'customerFilter' to urls: [/customer/*]
+2019-01-08 20:38:29.681  INFO 13792 --- [main] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2019-01-08 20:38:29.823  INFO 13792 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-01-08 20:38:29.971  INFO 13792 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-01-08 20:38:29.975  INFO 13792 --- [main] webServices.FirstWebServiceApplication   : Started FirstWebServiceApplication in 1.463 seconds (JVM running for 2.28)
+2019-01-08 20:39:32.102  INFO 13792 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-01-08 20:39:32.103  INFO 13792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-01-08 20:39:32.107  INFO 13792 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2019-01-08 20:40:45.069  INFO 13792 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2019-01-08 20:40:45.070  INFO 13792 --- [RMI TCP Connection(6)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

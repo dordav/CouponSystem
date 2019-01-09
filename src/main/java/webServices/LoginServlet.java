@@ -38,18 +38,18 @@ public class LoginServlet {
 		case admin:
 			AdminFacade adminFacade = (AdminFacade) cf;
 			request.getSession().setAttribute("adminFacade", adminFacade);
-			return "redirect:http://localhost:8080/admin/index.html";
+			return "redirect:https://coupon-system-by-dor.herokuapp.com/admin/index.html";
 		case company:
 			CompanyFacade companyFacade = (CompanyFacade) cf;
 			request.getSession().setAttribute("companyFacade", companyFacade);
-			return "redirect:http://localhost:8080/company/index.html";
+			return "redirect:https://coupon-system-by-dor.herokuapp.com/company/index.html";
 		case customer:
 			CustomerFacade customerFacade = (CustomerFacade) cf;
 			request.getSession().setAttribute("customerFacade", customerFacade);
-			return "redirect:http://localhost:8080/customer/index.html";
+			return "redirect:https://coupon-system-by-dor.herokuapp.com/customer/index.html";
 		}
 
-		return "redirect:http://localhost:8080/login.html";
+		return "redirect:http:https://coupon-system-by-dor.herokuapp.com/login.html";
 	}
 
 }

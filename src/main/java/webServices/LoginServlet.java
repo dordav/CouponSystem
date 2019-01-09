@@ -29,7 +29,7 @@ public class LoginServlet {
 
 		CouponClientFacade cf = (new CouponSystem()).Login(userName, password, type); 
 		if (cf == null) {
-			return "redirect:http://localhost:8080/login.html";
+			return "redirect:http:https://coupon-system-by-dor.herokuapp.com/login.html";
 		}
 
 		request.getSession().setAttribute("facade", cf);

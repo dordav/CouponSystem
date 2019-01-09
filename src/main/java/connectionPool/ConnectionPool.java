@@ -17,7 +17,7 @@ import exceptions.CouponSystemException;
  */
 public class ConnectionPool {
 
-	private String url = "jdbc:derby:coupon;create=true";
+//	private String url = "jdbc:derby:coupon;create=true";
 	private String urlHeroku = "jdbc:postgresql://ec2-107-20-183-142.compute-1.amazonaws.com:5432/"
 			+ "d1o6cv10hqf58j?sslmode=require";
 	private String userName = "rfpvpniqnuhvut";
@@ -35,7 +35,7 @@ public class ConnectionPool {
 		try {
 			Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
 			for (int i = 0; i < con_max_size; i++) {
-				Connection con = DriverManager.getConnection(url);
+				Connection con = DriverManager.getConnection(urlHeroku,userName,password );
 				connections.add(con);
 			}
 		} catch (SQLException | ClassNotFoundException e) {

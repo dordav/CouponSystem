@@ -39,7 +39,7 @@ public class ConnectionPool {
 				connections.add(con);
 			}
 		} catch (SQLException | ClassNotFoundException e) {
-			throw new CouponSystemException("Something went wrong ", e);
+			throw new CouponSystemException("connection pool initialization failed ", e);
 		}
 	}
 	

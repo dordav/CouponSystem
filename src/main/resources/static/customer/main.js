@@ -1117,6 +1117,7 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var NavBarComponent = /** @class */ (function () {
     function NavBarComponent(_http) {
         this._http = _http;
+        this.url = "https://coupon-system-by-dor.herokuapp.com/customer";
     }
     /**
      * @ngdoc method
@@ -1142,12 +1143,12 @@ var NavBarComponent = /** @class */ (function () {
         });
     };
     NavBarComponent.prototype.logoutmethod = function () {
-        this._http.get("http://localhost:8080/customer/logout")
+        this._http.get(this.url + "/logout")
             .subscribe(function (resp) {
-            window.location.href = 'http://localhost:8080/login.html';
+            window.location.href = 'https://coupon-system-by-dor.herokuapp.com/login.html';
             console.log(resp.json());
         }, function (err) {
-            window.location.href = 'http://localhost:8080/login.html';
+            window.location.href = 'https://coupon-system-by-dor.herokuapp.com/login.html';
             console.log(err.json());
         });
     };
@@ -1252,6 +1253,7 @@ var CouponsMethodsService = /** @class */ (function () {
         this._router = _router;
         this.coupon = new _components_coupons_coupon__WEBPACK_IMPORTED_MODULE_2__["coupon"](0, "", "", "", 0, 0, "", 0, "");
         this.coupons2 = [];
+        this.url = "https://coupon-system-by-dor.herokuapp.com/customer";
     }
     /**
    * @ngdoc method
@@ -1303,7 +1305,7 @@ var CouponsMethodsService = /** @class */ (function () {
      **/
     CouponsMethodsService.prototype.getcouponsbyprice = function (price) {
         var _this = this;
-        this._http.get("http://localhost:8080/customer/getallcouponsbyprice/" + price).
+        this._http.get(this.url + "/getallcouponsbyprice/" + price).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1334,7 +1336,7 @@ var CouponsMethodsService = /** @class */ (function () {
      **/
     CouponsMethodsService.prototype.getcouponsbytype = function (type) {
         var _this = this;
-        this._http.get("http://localhost:8080/customer/getallcouponsbytype/" + type).
+        this._http.get(this.url + "/getallcouponsbytype/" + type).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1391,7 +1393,7 @@ var CouponsMethodsService = /** @class */ (function () {
      **/
     CouponsMethodsService.prototype.getallcoupons = function () {
         var _this = this;
-        this._http.get("http://localhost:8080/customer/getallcoupons").
+        this._http.get(this.url + "/getallcoupons").
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1508,7 +1510,7 @@ var CouponsMethodsService = /** @class */ (function () {
     CouponsMethodsService.prototype.purchase = function () {
         var _this = this;
         this.coupons2.forEach(function (coupon) {
-            _this._http.post("http://localhost:8080/customer/purchasecoupon", coupon).
+            _this._http.post(_this.url + "/purchasecoupon", coupon).
                 subscribe(
             // handle with the returned result
             function (resp) {
@@ -1607,6 +1609,7 @@ var CustomerServiecesService = /** @class */ (function () {
     function CustomerServiecesService(_http) {
         this._http = _http;
         this.coupon = new _components_coupons_coupon__WEBPACK_IMPORTED_MODULE_1__["coupon"](0, "", "", "", 0, 0, "", 0, "");
+        this.url = "https://coupon-system-by-dor.herokuapp.com/customer";
     }
     /**
      * @ngdoc method
@@ -1646,7 +1649,7 @@ var CustomerServiecesService = /** @class */ (function () {
      **/
     CustomerServiecesService.prototype.getallpurchasedcoupons = function () {
         var _this = this;
-        this._http.get("http://localhost:8080/customer/purchasedcoupons").
+        this._http.get(this.url + "/purchasedcoupons").
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1679,7 +1682,7 @@ var CustomerServiecesService = /** @class */ (function () {
      **/
     CustomerServiecesService.prototype.getpurchasedcouponsbytype = function (type) {
         var _this = this;
-        this._http.get("http://localhost:8080/customer/purchasedcouponsbytype/" + type).
+        this._http.get(this.url + "/purchasedcouponsbytype/" + type).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1711,7 +1714,7 @@ var CustomerServiecesService = /** @class */ (function () {
      **/
     CustomerServiecesService.prototype.getpurchasedcouponsbyprice = function (price) {
         var _this = this;
-        this._http.get("http://localhost:8080/customer/purchasedcouponsbyprice/" + price).
+        this._http.get(this.url + "/purchasedcouponsbyprice/" + price).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1853,7 +1856,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! G:\Angular projects\customerWeb\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! G:\Angular project for AWS\customerWeb\src\main.ts */"./src/main.ts");
 
 
 /***/ })

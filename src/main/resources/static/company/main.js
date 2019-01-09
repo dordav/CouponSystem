@@ -810,6 +810,7 @@ var GetAllCouponsComponent = /** @class */ (function () {
         this._router = _router;
         this._route = _route;
         this.coupons2 = [];
+        this.url = "https://coupon-system-by-dor.herokuapp.com/company";
         /**
          * @function http:Http.
          * @description
@@ -817,7 +818,7 @@ var GetAllCouponsComponent = /** @class */ (function () {
          * Then by async (Observable) method named "subscribe" catch  the response
          * and put it into local array.
          **/
-        this._http.get("http://localhost:8080/company/getallcoupons").
+        this._http.get(this.url + "/getallcoupons").
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1162,6 +1163,7 @@ var UpdateCouponComponent = /** @class */ (function () {
         this._http = _http;
         this.coupon = new _coupon__WEBPACK_IMPORTED_MODULE_2__["coupon"](0, "", "", "", 0, 0, "", 0, "");
         this.coupon2 = new _coupon__WEBPACK_IMPORTED_MODULE_2__["coupon"](0, "", "", "", 0, 0, "", 0, "");
+        this.url = "https://coupon-system-by-dor.herokuapp.com/company";
         this.show = false;
     }
     /**
@@ -1223,7 +1225,7 @@ var UpdateCouponComponent = /** @class */ (function () {
         var _this = this;
         if (!(this.coupon2.id > 0)) {
             this.swalwarning("Wrong ID");
-            this._http.get("http://localhost:8080/company/getcoupon/" + id).
+            this._http.get(this.url + "/getcoupon/" + id).
                 subscribe(
             // handle with the returned result
             function (resp) {
@@ -1349,6 +1351,7 @@ var NavBarComponent = /** @class */ (function () {
     function NavBarComponent(_router, _http) {
         this._router = _router;
         this._http = _http;
+        this.url = "https://coupon-system-by-dor.herokuapp.com/company";
     }
     /**
   * @ngdoc method
@@ -1374,12 +1377,12 @@ var NavBarComponent = /** @class */ (function () {
         });
     };
     NavBarComponent.prototype.logoutmethod = function () {
-        this._http.get("http://localhost:8080/company/logout")
+        this._http.get(this.url + "/logout")
             .subscribe(function (resp) {
-            window.location.href = 'http://localhost:8080/login.html';
+            window.location.href = 'https://coupon-system-by-dor.herokuapp.com/login.html';
             console.log(resp.json());
         }, function (err) {
-            window.location.href = 'http://localhost:8080/login.html';
+            window.location.href = 'https://coupon-system-by-dor.herokuapp.com/login.html';
             console.log(err.json());
         });
     };
@@ -1435,6 +1438,7 @@ var CouponsMethodsService = /** @class */ (function () {
         this._http = _http;
         this._router = _router;
         this.coupons2 = [];
+        this.url = "https://coupon-system-by-dor.herokuapp.com/company";
         this.coupon = new _components_coupons_coupon__WEBPACK_IMPORTED_MODULE_2__["coupon"](0, "", "", "", 0, 0, "", 0, "");
     }
     /**
@@ -1489,7 +1493,7 @@ var CouponsMethodsService = /** @class */ (function () {
             this.swalwarning("Please fill all the empty fields");
         }
         else {
-            this._http.post("http://localhost:8080/company/createcoupon", coupon).
+            this._http.post(this.url + "/createcoupon", coupon).
                 subscribe(
             // handle with the returned result
             function (resp) {
@@ -1520,7 +1524,7 @@ var CouponsMethodsService = /** @class */ (function () {
     CouponsMethodsService.prototype.updatecoupon = function (coupon2) {
         var _this = this;
         // fire ajax PUT
-        this._http.put("http://localhost:8080/company/updatecoupon", coupon2).
+        this._http.put(this.url + "/updatecoupon", coupon2).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1550,7 +1554,7 @@ var CouponsMethodsService = /** @class */ (function () {
     CouponsMethodsService.prototype.deletecoupon = function (id) {
         var _this = this;
         // fire ajax DELETE
-        this._http.delete("http://localhost:8080/company/deletecoupon/" + id).
+        this._http.delete(this.url + "/deletecoupon/" + id).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1579,7 +1583,7 @@ var CouponsMethodsService = /** @class */ (function () {
      **/
     CouponsMethodsService.prototype.getcouponsbytype = function (type) {
         var _this = this;
-        this._http.get("http://localhost:8080/company/getallcouponsbytype/" + type).
+        this._http.get(this.url + "/getallcouponsbytype/" + type).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1616,7 +1620,7 @@ var CouponsMethodsService = /** @class */ (function () {
             console.log(id);
         }
         else {
-            this._http.get("http://localhost:8080/company/getcoupon/" + id).
+            this._http.get(this.url + "/getcoupon/" + id).
                 subscribe(
             // handle with the returned result
             function (resp) {
@@ -1648,7 +1652,7 @@ var CouponsMethodsService = /** @class */ (function () {
    **/
     CouponsMethodsService.prototype.getcouponsbyprice = function (price) {
         var _this = this;
-        this._http.get("http://localhost:8080/company/getallcouponsbyprice/" + price).
+        this._http.get(this.url + "/getallcouponsbyprice/" + price).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1680,7 +1684,7 @@ var CouponsMethodsService = /** @class */ (function () {
    **/
     CouponsMethodsService.prototype.getcouponsbydate = function (date) {
         var _this = this;
-        this._http.get("http://localhost:8080/company/getallcouponsbydate/" + date).
+        this._http.get(this.url + "/getallcouponsbydate/" + date).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1863,7 +1867,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! G:\Angular projects\companyWeb\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! G:\Angular project for AWS\companyWeb\src\main.ts */"./src/main.ts");
 
 
 /***/ })

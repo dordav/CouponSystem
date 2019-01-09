@@ -634,6 +634,7 @@ var GetAllCompaniesComponent = /** @class */ (function () {
         this._route = _route;
         this._router = _router;
         this._compserv = _compserv;
+        this.url = "https://coupon-system-by-dor.herokuapp.com/admin";
         this.companies2 = [];
         /**
          * @function http:Http.
@@ -642,7 +643,7 @@ var GetAllCompaniesComponent = /** @class */ (function () {
          * Then by async (Observable) method named "subscribe" catch  the response
          * and put it into local array.
          **/
-        this._http.get("http://localhost:8080/admin/getallcompanies").
+        this._http.get(this.url + "/getallcompanies").
             subscribe(function (resp) {
             _this.companies = _this.sortbyId(resp.json());
             _this.companies2 = _this.companies;
@@ -1188,6 +1189,7 @@ var GetAllCustomersComponent = /** @class */ (function () {
     function GetAllCustomersComponent(_http) {
         var _this = this;
         this._http = _http;
+        this.url = "https://coupon-system-by-dor.herokuapp.com/admin";
         /**
          * @function http:Http.
          * @description
@@ -1195,7 +1197,7 @@ var GetAllCustomersComponent = /** @class */ (function () {
          * Then by async (Observable) method named "subscribe" catch  the response
          * and put it into local array.
          **/
-        this._http.get("http://localhost:8080/admin/getallcustomers").
+        this._http.get(this.url + "/getallcustomers").
             subscribe(function (resp) {
             _this.customers = resp.json();
             console.log(resp);
@@ -1448,6 +1450,7 @@ var NavBarComponent = /** @class */ (function () {
     function NavBarComponent(_router, _http) {
         this._router = _router;
         this._http = _http;
+        this.url = "https://coupon-system-by-dor.herokuapp.com/admin";
     }
     /**
    * @ngdoc method
@@ -1473,12 +1476,12 @@ var NavBarComponent = /** @class */ (function () {
         });
     };
     NavBarComponent.prototype.logoutmethod = function () {
-        this._http.get("http://localhost:8080/admin/logout")
+        this._http.get(this.url + "/logout")
             .subscribe(function (resp) {
-            window.location.href = 'http://localhost:8080/login.html';
+            window.location.href = 'https://coupon-system-by-dor.herokuapp.com/login.html';
             console.log(resp.json());
         }, function (err) {
-            window.location.href = 'http://localhost:8080/login.html';
+            window.location.href = 'https://coupon-system-by-dor.herokuapp.com/login.html';
             console.log(err.json());
         });
     };
@@ -1532,6 +1535,7 @@ var CompanyServicesService = /** @class */ (function () {
         this._http = _http;
         this.company = new _components_companies_company__WEBPACK_IMPORTED_MODULE_2__["company"](0, "", "", "");
         this.companyToUpdate = new _components_companies_company__WEBPACK_IMPORTED_MODULE_2__["company"](0, "", "", "");
+        this.url = "https://coupon-system-by-dor.herokuapp.com/admin";
     }
     /**
      * @ngdoc method
@@ -1559,7 +1563,7 @@ var CompanyServicesService = /** @class */ (function () {
     CompanyServicesService.prototype.createcompany = function (company) {
         var _this = this;
         // fire ajax POST
-        this._http.post("http://localhost:8080/admin/createcompany", company)
+        this._http.post(this.url + "/createcompany", company)
             .subscribe(function (resp) {
             console.log(resp);
             _this.swalDone("Created!", "Company by name: " + company.name + " created!");
@@ -1606,7 +1610,7 @@ var CompanyServicesService = /** @class */ (function () {
             this.swalwarning("Wrong ID");
         }
         else {
-            this._http.get("http://localhost:8080/admin/getcompany/" + id)
+            this._http.get(this.url + "/getcompany/" + id)
                 .subscribe(
             // handle with the returned result
             function (resp) {
@@ -1637,7 +1641,7 @@ var CompanyServicesService = /** @class */ (function () {
     CompanyServicesService.prototype.updatecompany = function () {
         var _this = this;
         // fire ajax PUT
-        this._http.put("http://localhost:8080/admin/updatecompany", this.companyToUpdate).
+        this._http.put(this.url + "/updatecompany", this.companyToUpdate).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1693,7 +1697,7 @@ var CompanyServicesService = /** @class */ (function () {
     CompanyServicesService.prototype.deletecompany = function (id) {
         var _this = this;
         // fire ajax DELETE
-        this._http.delete("http://localhost:8080/admin/removecompany/" + id).
+        this._http.delete(this.url + "/removecompany/" + id).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1788,6 +1792,7 @@ var CustomerServicesService = /** @class */ (function () {
         this._http = _http;
         this.customer = new _components_customers_customer__WEBPACK_IMPORTED_MODULE_2__["customer"];
         this.customerToUpdate = new _components_customers_customer__WEBPACK_IMPORTED_MODULE_2__["customer"];
+        this.url = "https://coupon-system-by-dor.herokuapp.com/admin";
     }
     /**
    * @ngdoc method
@@ -1828,7 +1833,7 @@ var CustomerServicesService = /** @class */ (function () {
     **/
     CustomerServicesService.prototype.createcustomer = function (customer) {
         var _this = this;
-        this._http.post("http://localhost:8080/admin/createcustomer", customer).
+        this._http.post(this.url + "/createcustomer", customer).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1862,7 +1867,7 @@ var CustomerServicesService = /** @class */ (function () {
             this.swalwarning("Wrong ID");
         }
         else {
-            this._http.get("http://localhost:8080/admin/getcustomer/" + id).
+            this._http.get(this.url + "/getcustomer/" + id).
                 subscribe(
             // handle with the returned result
             function (resp) {
@@ -1894,7 +1899,7 @@ var CustomerServicesService = /** @class */ (function () {
     CustomerServicesService.prototype.updatecustomer = function (customer2) {
         var _this = this;
         // fire ajax PUT
-        this._http.put("http://localhost:8080/admin/updatecustomer", customer2).
+        this._http.put(this.url + "/updatecustomer", customer2).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -1923,7 +1928,7 @@ var CustomerServicesService = /** @class */ (function () {
    **/
     CustomerServicesService.prototype.deletecustomer = function (id) {
         var _this = this;
-        this._http.delete("http://localhost:8080/admin/removecustomer/" + id).
+        this._http.delete(this.url + "/removecustomer/" + id).
             subscribe(
         // handle with the returned result
         function (resp) {
@@ -2076,7 +2081,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! G:\Angular projects\adminWeb\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! G:\Angular project for AWS\adminWeb\src\main.ts */"./src/main.ts");
 
 
 /***/ })

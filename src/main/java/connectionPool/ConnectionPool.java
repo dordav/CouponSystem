@@ -18,9 +18,9 @@ import exceptions.CouponSystemException;
 public class ConnectionPool {
 
 //	private String url = "jdbc:derby:coupon;create=true";
-	private String urlHeroku = "jdbc:postgresql://ec2-107-20-183-142.compute-1.amazonaws.com:5432/d1o6cv10hqf58j";
-	private String userName = "rfpvpniqnuhvut";
-	private String password = "6abaeb324ff7b83f644e7a623dfd683997840d9c61cae8dc3253749bf6aab5ce";
+	private String urlHeroku = "jdbc:postgresql://ec2-54-243-223-245.compute-1.amazonaws.com:5432/d267frh5dte10d";
+	private String userName = "ttnsxjqbvyxwqs";
+	private String password = "8d355696f6c5db47770f213fb3bf9554e63ea3a143506bbf1c2d50acca04968c";
 	private Collection<Connection> connections;
 	final static int con_min_size = 0;
 	final static int con_max_size = 10;
